@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 // Connection URI. Replace this with your MongoDB deployment's connection string
 const uri =
-  "mongodb+srv://devemahore:dev07dev@cluster0.llmwezd.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://";
 
 // Connect to MongoDB
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -54,7 +54,7 @@ const YourModel = mongoose.model("YourModel", yourSchema);
   for (let pagePointer = 1; pagePointer < 37; pagePointer++) {
     console.log("page -----------> ", pagePointer);
     await page.goto(
-      `https://www.semrush.com/agencies/list/?page=${pagePointer}`
+      `https://xyz/agencies/list/?page=${pagePointer}`
     );
 
     // Wait for the list elements to load
@@ -69,7 +69,7 @@ const YourModel = mongoose.model("YourModel", yourSchema);
 
     for (const link of links) {
       const newPage = await browser.newPage();
-      await newPage.goto(`https://www.semrush.com${link}`);
+      await newPage.goto(`https://xyz${link}`);
       await new Promise((resolve) => setTimeout(resolve, 2000)); // Waits for 3 seconds
       const counts = (await newPage.$("#success-stories")) ? 1 : 0;
       let dynamic;

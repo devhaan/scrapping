@@ -5,7 +5,7 @@
 
 Puppeteer Web Scraping & MongoDB Data Storage
 Objective:
-The script performs web scraping using Puppeteer to extract agency details from multiple pages on 'https://www.semrush.com/agencies/list/'. The extracted data is then stored in a MongoDB database using Mongoose.
+The script performs web scraping using Puppeteer to extract agency details from multiple pages on 'https://wm/agencies/list/'. The extracted data is then stored in a MongoDB database using Mongoose.
 
 Dependencies:
 Puppeteer: Automates browser actions to navigate web pages, extract data, and create new pages.
@@ -24,7 +24,7 @@ Defines a Mongoose schema (yourSchema) specifying the structure of agency data.
 Creates a model (YourModel) based on the defined schema for MongoDB interaction.
 Web Scraping Loop:
 
-Iterates through multiple pages (from 1 to 36) of the URL 'https://www.semrush.com/agencies/list/'.
+Iterates through multiple pages (from 1 to 36) of the URL 'https:///agencies/list/'.
 Fetches data from each page to extract agency information.
 Data Extraction and Storage:
 
